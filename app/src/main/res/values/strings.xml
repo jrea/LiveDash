@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">LiveDash</string>
+    <string name="app_name">Live Dash</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="favorites">Favorites</string>
+    <string name="pings">Pings</string>
 
 </resources>

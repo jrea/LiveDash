@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/Users/josephr/AndroidStudioProjects/LiveDash/app/build/intermediates/pre-dexed/debug/android-support-v4-39a4827eae5149fea795e8f67eabdc19948bfe5c.jar"
+        jar="/Users/josephr/AndroidStudioProjects/LiveDash/app/libs/android-support-v4.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="efec67655f6db90757faa37201efcee2a9ec3507"/>
+    <item
+        dex="/Users/josephr/AndroidStudioProjects/LiveDash/app/build/intermediates/pre-dexed/debug/ActiveAndroid-3.1-adcddac4c58-a079e12cbf5276805813e4484ae4488e13c789dc.jar"
+        jar="/Users/josephr/AndroidStudioProjects/LiveDash/app/libs/ActiveAndroid-3.1-adcddac4c58.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="e550c03ed8bcfe3b9f97d8c5ce6e8ee305f3beed"/>
+    <item
+        dex="/Users/josephr/AndroidStudioProjects/LiveDash/app/build/intermediates/pre-dexed/debug/universal-image-loader-1.8.4-bf54bf4dd9197a8ededaca3b1f5733d419da89aa.jar"
+        jar="/Users/josephr/AndroidStudioProjects/LiveDash/app/libs/universal-image-loader-1.8.4.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="eee81e43531ce82db1781c5a8b27781ca384eede"/>
+
+</pre-dex-items>
