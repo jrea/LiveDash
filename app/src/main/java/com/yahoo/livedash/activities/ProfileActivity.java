@@ -3,6 +3,7 @@ package com.yahoo.livedash.activities;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
@@ -10,9 +11,11 @@ import android.widget.LinearLayout;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.yahoo.livedash.R;
+import com.yahoo.livedash.fragments.EventsFragment;
 
-public class ProfileActivity extends Activity {
+public class ProfileActivity extends FragmentActivity {
     ImageView ivProfile;
+    EventsFragment fragmentEvents;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +24,9 @@ public class ProfileActivity extends Activity {
         ivProfile.setImageResource(android.R.color.transparent);
         ImageLoader imageLoader = ImageLoader.getInstance();
         imageLoader.displayImage("http://www2.psd100.com/icon/2013/09/1001/user-icon-0910125612.png", ivProfile);
+
+        fragmentEvents = (EventsFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_events);
+        fragmentEvents.load();
     }
 
 

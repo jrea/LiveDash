@@ -56,4 +56,14 @@
         android:layout_toEndOf="@+id/centerShim"
         android:background="@drawable/button_custom" />
 
+    <fragment
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="com.yahoo.livedash.fragments.EventsFragment"
+        android:id="@+id/fragment_events"
+        android:layout_below="@+id/bt_profile_pings"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        tools:layout="@layout/fragment_events_list" />
+
 </RelativeLayout>
