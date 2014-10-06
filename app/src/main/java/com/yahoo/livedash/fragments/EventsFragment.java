@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.yahoo.livedash.R;
 import com.yahoo.livedash.asynctasks.YqlVideoEvents;
@@ -29,12 +30,14 @@ public class EventsFragment extends Fragment {
     private ArrayList<Event> events;
     private ArrayAdapter<Event> aEvents;
     private ListView lvEvents;
+    private String title;
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v =  inflater.inflate(R.layout.fragment_events_list, container, false);
         lvEvents = (ListView) v.findViewById(R.id.lv_events);
         lvEvents.setAdapter(aEvents);
-        return v;
+
+       return v;
     }
 
     @Override
@@ -42,10 +45,12 @@ public class EventsFragment extends Fragment {
         super.onCreate(savedInstanceState);
         events = new ArrayList<Event>();
         aEvents = new EventArrayAdapter(getActivity(), events);
+        title = getArguments().getString("someTitle");
+        load();
     }
 
-    public void addAll(ArrayList<Event> tweets) {
-        aEvents.addAll(tweets);
+    public void addAll(ArrayList<Event> events) {
+        aEvents.addAll(events);
     }
 
     public void load() {
@@ -57,5 +62,15 @@ public class EventsFragment extends Fragment {
                addAll(Event.fromJSONArray(json));
            }
        }).execute("http://video.stage.media.yql.yahoo.com/v1/video/events?dev_type=int");
+    }
+
+    // newInstance constructor for creating fragment with arguments
+    public static EventsFragment newInstance(int page, String title) {
+        EventsFragment fragmentEvents = new EventsFragment();
+        Bundle args = new Bundle();
+        args.putInt("someInt", page);
+        args.putString("someTitle", title);
+        fragmentEvents.setArguments(args);
+        return fragmentEvents;
     }
 }
