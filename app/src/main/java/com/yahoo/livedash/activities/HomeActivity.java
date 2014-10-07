@@ -15,11 +15,16 @@ public class HomeActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        goToProfile();
+        goToEvents();
     }
 
     private void goToProfile() {
         Intent i = new Intent(HomeActivity.this, ProfileActivity.class);
+        startActivity(i);
+    }
+
+    private void goToEvents() {
+        Intent i = new Intent(HomeActivity.this, EventActivity.class);
         startActivity(i);
     }
 

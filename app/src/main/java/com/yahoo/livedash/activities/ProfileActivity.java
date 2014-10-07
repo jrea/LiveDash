@@ -2,11 +2,13 @@ package com.yahoo.livedash.activities;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,17 +22,23 @@ import com.yahoo.livedash.fragments.EventsFragment;
 import com.yahoo.livedash.fragments.PingFragment;
 
 public class ProfileActivity extends FragmentActivity {
-    ImageView ivProfile;
+    ImageView ivProfile, ivCup;
     FragmentPagerAdapter adapterViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        PagerTabStrip pts = (PagerTabStrip) findViewById(R.id.profile_pager_header);
+        pts.setDrawFullUnderline(true);
+        pts.setTabIndicatorColor(Color.rgb(248, 14, 93));
+
         ivProfile = (ImageView) findViewById(R.id.iv_profile_userIcon);
-        ivProfile.setImageResource(android.R.color.transparent);
-        ImageLoader imageLoader = ImageLoader.getInstance();
-        imageLoader.displayImage("http://www2.psd100.com/icon/2013/09/1001/user-icon-0910125612.png", ivProfile);
+        ivProfile.setImageResource(R.drawable.trophyicon);
+
+        ivCup = (ImageView) findViewById(R.id.iv_profile_badge);
+        ivCup.setImageResource(R.drawable.usericon);
 
         ViewPager vpPager = (ViewPager) findViewById(R.id.vpPager);
         adapterViewPager = new MyPagerAdapter(getSupportFragmentManager());
