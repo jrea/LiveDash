@@ -41,7 +41,6 @@ public class EventActivity extends Activity {
 
             @Override
             public void onSuccess(JSONArray json) {
-                Log.i("DEBUG", json.toString());
                 aEvents.addAll(Event.fromJSONArray(json));
             }
         }).execute("http://video.stage.media.yql.yahoo.com/v1/video/events?dev_type=int");

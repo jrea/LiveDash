@@ -12,15 +12,17 @@ import java.util.ArrayList;
  * Created by josephr on 9/30/14.
  */
 public class Event {
-    private String description, title, artist_name, venue_city;
+    private String description, title, artist_name, venue_city, image;
 
     public static Event fromJSON(JSONObject json) {
         Event event = new Event();
         try {
-            event.description = json.getString("description");
-            event.title = json.getString("title");
-            event.artist_name = json.getString("artist_name");
-            event.venue_city = json.getString("venue_city");
+            event.description = json.getJSONObject("metadata").getString("description");
+            event.title = json.getJSONObject("metadata").getString("title");
+            event.artist_name = json.getJSONObject("metadata").getString("artist_name");
+            event.venue_city = json.getJSONObject("metadata").getString("venue_city");
+            event.image = json.getJSONArray("images").getJSONObject(0).getString("url");
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -33,7 +35,7 @@ public class Event {
         for(int i = 0; i < json.length(); i++) {
             JSONObject eventJson = null;
             try{
-                eventJson = json.getJSONObject(i).getJSONObject("metadata");
+                eventJson = json.getJSONObject(i);
             } catch (Exception e) {
                 e.printStackTrace();
                 continue;
@@ -62,5 +64,9 @@ public class Event {
 
     public String getVenue_city() {
         return venue_city;
+    }
+
+    public String getImage() {
+        return image;
     }
 }

@@ -20,39 +20,55 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_marginLeft="5dp"
-            android:layout_toLeftOf="@+id/imageButton"
-            android:layout_toStartOf="@+id/imageButton"
+            android:layout_toLeftOf="@+id/event_image_play_button"
+            android:layout_toStartOf="@+id/event_image_play_button"
             android:gravity="center_vertical"
             android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginTop="10dp" />
 
         <ImageView
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:id="@+id/imageView"
-            android:background="@drawable/dashed"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:id="@+id/event_item_album_art"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
+            android:gravity="center_vertical"
             android:contentDescription="@string/event_image"
+            android:scaleType="centerCrop"
             android:layout_margin="5dp"
             android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:cropToPadding="false" />
 
         <ImageButton
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:id="@+id/imageButton"
+            android:id="@+id/event_image_play_button"
             android:layout_alignParentTop="true"
-            android:layout_toStartOf="@+id/imageView"
+            android:layout_toStartOf="@+id/event_item_album_art"
             android:contentDescription="@string/favorite"
             android:background="@drawable/headphones"
-            android:layout_toLeftOf="@+id/imageView"
+            android:layout_toLeftOf="@+id/event_item_album_art"
             android:layout_margin="5dp"
             android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/tv_event_description"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="10dp"
+            android:textColor="#ff777777"
+            android:layout_alignRight="@+id/event_image_play_button"
+            android:layout_alignEnd="@+id/event_image_play_button"
+            android:layout_below="@+id/event_image_play_button"
+            android:paddingLeft="5dp" />
 
     </RelativeLayout>
 </LinearLayout>
