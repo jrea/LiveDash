@@ -33,6 +33,7 @@ public class EventWithExtrasArrayAdapter extends ArrayAdapter<Event> {
         } else {
             v = convertView;
         }
+
         TextView tv_name = (TextView) v.findViewById(R.id.tv_event_name);
         TextView tv_event_descriptopn = (TextView) v.findViewById(R.id.tv_event_description);
 
@@ -45,5 +46,9 @@ public class EventWithExtrasArrayAdapter extends ArrayAdapter<Event> {
         tv_event_descriptopn.setText(event.getDescription());
 
         return v;
+    }
+
+    private void openMenu() {
+
     }
 }

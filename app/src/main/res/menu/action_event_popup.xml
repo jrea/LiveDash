@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_album"
+        android:title="Album"
+        android:icon="@android:drawable/ic_menu_edit"/>
+    <item android:id="@+id/menu_tweets"
+        android:title="Tweets"
+        android:icon="@android:drawable/ic_menu_delete"/>
+    <item android:id="@+id/menu_activity"
+        android:title="Activity"
+        android:icon="@android:drawable/ic_menu_delete"/>
+    <item android:id="@+id/menu_share"
+        android:title="Share"
+        android:icon="@android:drawable/ic_menu_delete"/>
+</menu>

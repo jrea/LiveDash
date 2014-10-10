@@ -2,6 +2,7 @@ package com.yahoo.livedash.activities;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -70,6 +71,14 @@ public class ProfileActivity extends FragmentActivity {
 
     }
 
+    public void goToProfile(MenuItem item) {
+       //do nothing.
+    }
+
+    public void goToEvents(MenuItem item) {
+        Intent i = new Intent(this, EventActivity.class);
+        startActivity(i);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -83,10 +92,6 @@ public class ProfileActivity extends FragmentActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button_passive, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
         return super.onOptionsItemSelected(item);
     }
 

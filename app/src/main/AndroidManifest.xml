@@ -29,6 +29,22 @@
             android:name=".activities.EventActivity"
             android:label="@string/title_activity_event" >
         </activity>
+        <activity
+            android:name=".activities.StreamActivity"
+            android:label="@string/title_activity_stream" >
+        </activity>
+        <activity
+            android:name=".activities.AlbumActivity"
+            android:label="@string/title_activity_album" >
+        </activity>
+        <activity
+            android:name=".activities.ShareActivity"
+            android:label="@string/title_activity_share" >
+        </activity>
+        <activity
+            android:name=".activities.TweetsActivity"
+            android:label="@string/title_activity_tweets" >
+        </activity>
     </application>
 
 </manifest>

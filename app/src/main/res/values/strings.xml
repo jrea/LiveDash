@@ -11,5 +11,11 @@
     <string name="favorite">favorite</string>
     <string name="event_image">event image</string>
     <string name="event">Large Text</string>
+    <string name="action_profile">Profile</string>
+    <string name="action_events">Events</string>
+    <string name="title_activity_stream">StreamActivity</string>
+    <string name="title_activity_album">AlbumActivity</string>
+    <string name="title_activity_share">ShareActivity</string>
+    <string name="title_activity_tweets">TweetsActivity</string>
 
 </resources>
