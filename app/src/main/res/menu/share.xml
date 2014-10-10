@@ -1,8 +1,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.yahoo.livedash.activities.ShareActivity" >
-    <item android:id="@+id/action_settings"
-        android:title="@string/action_settings"
+    <item android:id="@+id/action_profile"
+        android:title="@string/action_profile"
         android:orderInCategory="100"
-        android:showAsAction="never" />
+        android:onClick="goToProfile"
+        android:showAsAction="ifRoom" />
+
+    <item android:id="@+id/action_events"
+        android:title="@string/action_events"
+        android:orderInCategory="100"
+        android:onClick="goToEvents"
+        android:showAsAction="ifRoom" />
 </menu>
